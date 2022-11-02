@@ -1,7 +1,7 @@
 class weapon:
     def __init__(self, munition:int, range:int):
-        self.munition= munition
-        self.range= range
+        self._munition= munition
+        self._range= range
         
 
     def fire_at(self, x:int, y:int, z:int):
@@ -16,8 +16,10 @@ class weapon:
 
 
 class Lance_missile_Anti_Surface(weapon):
-    def __init__(self, munition=30, range=40):
-        super.__init__(munition, range)
+    def __init__(self, munition=30, range=40, type: string):
+        super().__init__(munition, range)
+        self._type=type
+        
 
 
     def fire_at(self, x, y, z):
@@ -30,8 +32,9 @@ class Lance_missile_Anti_Surface(weapon):
             super().fire_at(x,y,z)
 
 class Lance_missile_Anti_Air(weapon):
-    def __init__(self, munition=50, range=40):
-        super.__init__(munition, range)
+    def __init__(self, munition=50, range=40, type: string):
+        super().__init__(munition, range)
+        self._type= type
 
 
     def fire_at(self, x, y, z):
@@ -44,8 +47,9 @@ class Lance_missile_Anti_Air(weapon):
             super().fire_at(x,y,z)
 
 class Lance_Torpille(weapon):
-    def __init__(self, munition=15, range=20):
-        super.__init__(munition, range)
+    def __init__(self, munition=15, range=20, type: string):
+        super().__init__(munition, range)
+        self._type=type
 
 
     def fire_at(self, x, y, z):
