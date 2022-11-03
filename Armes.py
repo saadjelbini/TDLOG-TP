@@ -1,4 +1,4 @@
-# je teste commit dfjshfb
+
 class Weapon:
     def __init__(self,ammunitions: int, range: int):
         self._ammunitions = ammunitions
@@ -11,7 +11,7 @@ class Weapon:
 
 
 class Lance_missile_anti_surface(Weapon):
-    def __init__(self, ammunitions=40, range=30):
+    def __init__(self, ammunitions=40, range=30,):
         super().__init__(ammunitions, range)
 
     def fire_at(x:int,y:int,z:int):
@@ -62,5 +62,6 @@ class Lance_Torpille(Weapon):
         else:
             print(f"feu sur le point {x},{y},{z}")
                 
-#good
+
+
         

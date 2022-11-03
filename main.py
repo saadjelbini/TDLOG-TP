@@ -1,11 +1,11 @@
-from Armes import Torpille
-from Armes import Missile_anti_air
-from Armes import Missile_anti_surface
+from Armes import Lance_Torpille
+from Armes import Lance_missile_anti_air
+from Armes import Lance_missile_anti_surface
 from Vaisseaux import Vessel
 
-Lance_missile_antisurface = Missile_anti_surface(40,30)
-Lance_missile_anti_air = Missile_anti_air(50,40)
-Lance_torpilles = Torpille(15,20)
+Lance_missile_antisurface = Lance_missile_anti_surface(40,30)
+Lance_missile_anti_air = Lance_missile_anti_air(50,40)
+Lance_torpilles = Lance_Torpille(15,20)
 
 
 
