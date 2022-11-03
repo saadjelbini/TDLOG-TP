@@ -1,5 +1,5 @@
 from Armes import Weapon
-
+#test
 class Vessel:
     def __init__(self, coordinates: tuple, max_hits: int, weapon: Weapon):
         self._coordinates=coordinates
