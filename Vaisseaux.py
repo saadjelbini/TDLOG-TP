@@ -28,4 +28,6 @@ class Cruiser(Vessel):
             Vessel.get_coordinates(x,y,z)
         except z ==0:
             print("Déplacement impossible")
+            
+#zwxecrvtbgyhnj,
 
