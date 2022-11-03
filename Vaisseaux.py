@@ -18,7 +18,7 @@ class Vessel:
     def fire_at(self,x:int,y:int,z:int):
         if self._max_hits==0:
             print("DestroyedError")
-        if sqrt( x**2+y**2) > Weapon.range:
+        if sqrt( x**2+y**2+z**2) > Weapon.range:
             print("OutOfRangeError")
             Weapon._ammunitions-=1
             
