@@ -1,4 +1,4 @@
-
+# je teste commit
 class Weapon:
     def __init__(self,ammunitions: int, range: int):
         self._ammunitions = ammunitions
