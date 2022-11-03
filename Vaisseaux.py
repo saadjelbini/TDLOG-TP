@@ -1,5 +1,5 @@
 from Armes import Weapon
-
+from math import sqrt
 class Vessel:
     def __init(self, coordinates: tuple, max_hits: int weapon: Weapon):
         self._coordinates=coordinates
@@ -16,9 +16,9 @@ class Vessel:
         self._z=z
 
     def fire_at(self,x:int,y:int,z:int):
-        if self._max_hits=0:
+        if self._max_hits==0:
             print("DestroyedError")
-        else self._coordinates> Weapon.range:
+        if sqrt( x**2+y**2) > Weapon.range:
             print("OutOfRangeError")
             Weapon._ammunitions-=1
             
