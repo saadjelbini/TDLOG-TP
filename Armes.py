@@ -62,4 +62,5 @@ class Lance_Torpille(Weapon):
         else:
             print(f"feu sur le point {x},{y},{z}")
                 
+#good
         
