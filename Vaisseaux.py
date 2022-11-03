@@ -23,7 +23,7 @@ class Vessel:
         elif self._coordinates> Weapon.range:
             print("OutOfRangeError")
             Weapon._ammunitions-=1
-            
+
 class Cruiser(Vessel):
     def go_to(self,x:int,y:int,z:int):
         try:
@@ -31,3 +31,4 @@ class Cruiser(Vessel):
         except z ==0:
             print("Déplacement impossible")
 
+print
