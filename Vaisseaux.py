@@ -29,5 +29,4 @@ class Cruiser(Vessel):
         except z ==0:
             print("Déplacement impossible")
             
-#zwxecrvtbgyhnj,
 
