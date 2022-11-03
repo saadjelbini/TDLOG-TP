@@ -22,11 +22,6 @@ class Vessel:
             print("OutOfRangeError")
             Weapon._ammunitions-=1
 
-class Cruiser(Vessel):
-    def go_to(self,x:int,y:int,z:int):
-        try:
-            Vessel.get_coordinates(x,y,z)
-        except z ==0:
-            print("Déplacement impossible")
+
             
 
