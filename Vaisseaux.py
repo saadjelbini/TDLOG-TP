@@ -36,7 +36,7 @@ class Cruiser(Vessel):
     def go_to(self,x:int,y:int,z:int):
         try:
             Vessel.get_coordinates(x,y,z)
-        except z ==0:
+        except z !=0:
             print("Déplacement impossible")
 
 
@@ -47,6 +47,11 @@ class Submarine(Vessel):
         self._max_hits=2
         self._coordinates=[-1,-1,-1]
 
+    def go_to(self,x:int,y:int,z:int):
+        try:
+            Vessel.get_coordinates(x,y,z)
+        except z !=-1 or z!=0:
+            print("Déplacement impossible")
 
 
             
@@ -58,6 +63,12 @@ class Fregate(Vessel):
         self._max_hits=5
         self._coordinates=[0,0,0]
             
+    def go_to(self,x:int,y:int,z:int):
+        try:
+            Vessel.get_coordinates(x,y,z)
+        except z !=0:
+            print("Déplacement impossible")
+
 
 class Destroyer(Vessel):
     def __init__(self, coordinates: tuple, max_hits: int, weapon= Weapon):
@@ -66,6 +77,11 @@ class Destroyer(Vessel):
         self._max_hits=4
         self._coordinates=[0,0,0]
 
+    def go_to(self,x:int,y:int,z:int):
+        try:
+            Vessel.get_coordinates(x,y,z)
+        except z !=0:
+            print("Déplacement impossible")
 
 class Aircraft(Vessel):
     def __init__(self, coordinates: tuple, max_hits: int, weapon= Weapon):
@@ -73,3 +89,9 @@ class Aircraft(Vessel):
         self._weapon=Lance_missile_anti_surface()
         self._max_hits=1
         self._coordinates=[1,1,1]
+
+    def go_to(self,x:int,y:int,z:int):
+        try:
+            Vessel.get_coordinates(x,y,z)
+        except z !=1:
+            print("Déplacement impossible")
