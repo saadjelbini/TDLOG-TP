@@ -1,4 +1,7 @@
 from Armes import Weapon
+from Armes import Lance_missile_anti_air
+from Armes import Lance_missile_anti_surface
+from Armes import Lance_Torpille
 import math
 class Vessel:
     def __init__(self,coordinates : tuple, max_hits : int, weapon : Weapon):
@@ -23,10 +26,46 @@ class Vessel:
             Weapon._ammunitions-=1
 
 class Cruiser(Vessel):
+    def __init__(self, coordinates: tuple, max_hits: int, weapon= Weapon):
+        super().__init__(coordinates, max_hits, weapon)
+        self._weapon=Lance_missile_anti_air()
+        self._max_hits=6
+        self._coordinates=[0,0,0]
+
     def go_to(self,x:int,y:int,z:int):
         try:
             Vessel.get_coordinates(x,y,z)
         except z ==0:
             print("Déplacement impossible")
+
+
+class Submarine(Vessel):
+    def __init__(self, coordinates: tuple, max_hits: int, weapon= Weapon):
+        super().__init__(coordinates, max_hits, weapon)
+        self._weapon=Lance_Torpille()
+        self._max_hits=2
+        self._coordinates=[-1,-1,-1]
             
 
+class Fregate(Vessel):
+    def __init__(self, coordinates: tuple, max_hits: int, weapon= Weapon):
+        super().__init__(coordinates, max_hits, weapon)
+        self._weapon=Lance_missile_anti_surface()
+        self._max_hits=5
+        self._coordinates=[0,0,0]
+            
+
+class Destroyer(Vessel):
+    def __init__(self, coordinates: tuple, max_hits: int, weapon= Weapon):
+        super().__init__(coordinates, max_hits, weapon)
+        self._weapon=Lance_Torpille()
+        self._max_hits=4
+        self._coordinates=[0,0,0]
+
+
+class Aircraft(Vessel):
+    def __init__(self, coordinates: tuple, max_hits: int, weapon= Weapon):
+        super().__init__(coordinates, max_hits, weapon)
+        self._weapon=Lance_missile_anti_surface()
+        self._max_hits=1
+        self._coordinates=[1,1,1]
