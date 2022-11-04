@@ -25,7 +25,7 @@ class Vessel:
             print("OutOfRangeError")
             Weapon._ammunitions-=1
 
-<<<<<<< HEAD
+
 class Cruiser(Vessel):
     def __init__(self, coordinates: tuple, max_hits: int, weapon= Weapon):
         super().__init__(coordinates, max_hits, weapon)
@@ -46,9 +46,9 @@ class Submarine(Vessel):
         self._weapon=Lance_Torpille()
         self._max_hits=2
         self._coordinates=[-1,-1,-1]
-=======
 
->>>>>>> b36d8c07e56a415c31c0be90b7bcfa73042f8969
+
+
             
 
 class Fregate(Vessel):
