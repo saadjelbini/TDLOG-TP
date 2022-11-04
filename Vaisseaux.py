@@ -22,6 +22,33 @@ class Vessel:
             print("OutOfRangeError")
             Weapon._ammunitions-=1
 
+class Cruiser(Vessel):
+    def __init__(self):
 
+        self.max_hits = 6
+        self.coordinates=(0,0,0)
+        #######self.weapon = "Anti-air" #a verifier
+        
+ class Submarine(Vessel):
+    def __init__(self,x,y):
+        self.max_hits = 2
+        self.coordinates=(x,y,-1) or (x,y,0)
+        ###self.weapon = "Lance-tropilles" #a verifier 
+        
+ class Fregate(Vessel):
+    def __init__ (self,x,y):
+        self.max_hits = 5
+        self.coordinates=(x,y,-1)
+      ##  self.weapon = "Lance-missilles antisurface" #a verifier
+ class Destroyer(Vessel):
+    def __init__ (self,x,y):
+        self.max_hits = 4
+        self.coordinates=(x,y,0)
+        ##self.weapon = "Lance-tropilles" #a verifier
+ class Aircraft(Vessel):
+    def __init__ (self,x,y):
+        self.max_hits = 1
+        self.coordinates=(x,y,1)
+        ##self.weapon = "Lance-missilles antisurface" #a verifier
             
 
