@@ -1,7 +1,4 @@
-from Armes import Weapon
-from Armes import Lance_missile_anti_air
-from Armes import Lance_missile_anti_surface
-from Armes import Lance_Torpille
+from Armes import*
 import math
 class Vessel:
     def __init__(self,coordinates : tuple, max_hits : int, weapon : Weapon):
