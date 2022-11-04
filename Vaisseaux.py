@@ -1,4 +1,4 @@
-from Armes import Weapon
+from Armes import*
 import math
 class Vessel:
     def __init__(self,coordinates : tuple, max_hits : int, weapon : Weapon):
@@ -26,29 +26,29 @@ class Cruiser(Vessel):
     def __init__(self):
 
         self.max_hits = 6
-        self.coordinates=(0,0,0)
-        #######self.weapon = "Anti-air" #a verifier
+        self.coordinates=(0,0,0) ## verifier ca svp
+        self.weapon =Lance_missile_anti_air() 
         
  class Submarine(Vessel):
     def __init__(self,x,y):
         self.max_hits = 2
         self.coordinates=(x,y,-1) or (x,y,0)
-        ###self.weapon = "Lance-tropilles" #a verifier 
+        self.weapon =Lance_Torpille() 
         
  class Fregate(Vessel):
     def __init__ (self,x,y):
         self.max_hits = 5
         self.coordinates=(x,y,-1)
-      ##  self.weapon = "Lance-missilles antisurface" #a verifier
+        self.weapon =Lance_missile_anti_surface() 
  class Destroyer(Vessel):
     def __init__ (self,x,y):
         self.max_hits = 4
         self.coordinates=(x,y,0)
-        ##self.weapon = "Lance-tropilles" #a verifier
+        self.weapon =Lance_Torpille()
  class Aircraft(Vessel):
     def __init__ (self,x,y):
         self.max_hits = 1
         self.coordinates=(x,y,1)
-        ##self.weapon = "Lance-missilles antisurface" #a verifier
+        self.weapon =Lance_missile_anti_surface()
             
 
