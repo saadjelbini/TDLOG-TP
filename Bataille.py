@@ -10,8 +10,18 @@ class espace_jeux():
         self.x =x
         self.y =y
         self.z= z
-        self.list = list_vaisseaux          ##### a continue
+        self.list = list_vaisseaux
+        
+    def recevoir():
+        
+    def game_over(Player):
+        if Player.hits == 0:
+            print("game over")
+        else:
+            pass
+
         
 class Player():
-     def __init__(self,vessel_list: list , Arme_list: list , hits:int):
-     self.
+     def __init__(self,vessel_list: list , Arme_list: list , hits:int,ammunations:int):
+        self.hits = 22
+
