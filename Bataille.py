@@ -5,6 +5,17 @@ import tkinter as tk
 from tkinter import ttk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
+# introduction de termes
+plateau = np.zeros([101,101,3],dtype =np.uint8)
+bleu1 = [96,199,255]
+bleu = [0,0,255]
+rouge = [255,0,0]
+vert = [0,255,0]
+blanc = [255,255,255]
+for i in range(len(plateau)):
+    for j in range(len(plateau[i])):
+        plateau[i][j] = bleu1
+
 class espace_jeux():
     def __init__(self,x,y,z,list_vaisseaux):
         self.x =x
